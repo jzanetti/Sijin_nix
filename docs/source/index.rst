@@ -12,7 +12,5 @@ Contents
 
 .. toctree::
 
-.. toctree::
-
    Setup
    Basics
