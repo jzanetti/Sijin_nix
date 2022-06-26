@@ -33,7 +33,16 @@ The description for the major components in a ``.nix`` build script is described
    :alt: alternate text
    :align: left
 
-The file can be obtained `here <https://nix-tutorial.gitlabpages.inria.fr/nix-tutorial/first-package.html#id1>`_
+The file can be obtained `here <https://nix-tutorial.gitlabpages.inria.fr/nix-tutorial/_downloads/d7c5653992d2c49aca0d70d034408e2a/chord_example.nix>`_
 
+Build the nix derivation
+------
+After download the above nix build script, we can build the package as:
+
+.. code-block:: bash
+
+   nix-build chord_example.nix
+
+The output should sit in ``./result/bin``, we may be able to test the build as ``chord --help``
 
 
