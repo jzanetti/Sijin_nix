@@ -31,7 +31,7 @@ Install nix
 Use nix
 ------
 .. list-table:: Some common usages
-   :widths: 30 50, 50
+   :widths: 30 50 50
    :header-rows: 1
 
    * - Description
