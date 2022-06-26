@@ -85,8 +85,8 @@ Use nix
      - Command
      - Example
    * - build a package
-     - `nix-build '<channel name>' -A <pkg>`
-     - `nix-build '<nixpkgs>' -A <hello>`
+     - ``nix-build '<channel name>' -A <pkg>``
+     - ``nix-build '<nixpkgs>' -A <hello>``
         - building the hello package 
           from the nixpkgs channel
 
@@ -95,8 +95,8 @@ Use nix
           e.g., a link pointing to the package 
           that has been put into the store is 
           created in ``./result/bin/hello``
-   * - clean up nix store of unused packages
-     - `nix-collect-garbage`
+   * - clean up nix store (unused packages)
+     - ``nix-collect-garbage``
      - N/A
 
 Reference
