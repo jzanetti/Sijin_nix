@@ -31,3 +31,9 @@ Install nix
 Use nix
 ------
 
+
+Reference
+***********
+https://rgoswami.me/posts/ccon-tut-nix/
+https://nix-tutorial.gitlabpages.inria.fr/nix-tutorial/getting-started.html
+
