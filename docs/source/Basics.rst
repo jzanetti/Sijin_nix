@@ -5,7 +5,9 @@ This page records some useful basic concepts and commands for **nix**
 
 .. note::
 
-   - **Nix derivation**: A derivation in Nix is a definition of a build, which takes some inputs and produces an output (in other words, the derivation is a function that describes a build process )
+   - **Nix derivation**: A derivation in Nix is a definition of a build, which takes some inputs and produces an output (in other words, the derivation is a function that describes a build process)
+
+   - **Nix store**: The approach taken by Nix is different. Nix stores all packages into a common place called the Nix store, usually located at `/nix/store`. Each package is stored in a unique subdirectory in the store, and each package has its own tree structure
 
 Install nix
 ------
