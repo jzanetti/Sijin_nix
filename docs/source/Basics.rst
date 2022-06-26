@@ -67,7 +67,7 @@ Use nix
      - N/A
    * - Add a new channel
      - - ``nix-channel --add <channel_link> <channel_name>``
-       - nix-channel --update`` 
+       - `nix-channel --update`
      - - ``nix-channel --add https://nixos.org/channels/nixos-19.03 nixpkgs``
        - ``nix-channel --update``
    * - Remove a channel
@@ -85,8 +85,8 @@ Use nix
      - Command
      - Example
    * - build a package
-     - ``nix-build '<channel name>' -A <pkg>`` 
-     - ``nix-build '<nixpkgs>' -A <hello>``
+     - `nix-build '<channel name>' -A <pkg>`
+     - `nix-build '<nixpkgs>' -A <hello>`
         - building the hello package 
           from the nixpkgs channel
 
@@ -95,7 +95,9 @@ Use nix
           e.g., a link pointing to the package 
           that has been put into the store is 
           created in ``./result/bin/hello``
-      
+   * - clean up nix store of unused packages
+     - `nix-collect-garbage`
+     - N/A
 
 Reference
 ------
