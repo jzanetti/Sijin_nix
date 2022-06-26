@@ -30,10 +30,24 @@ Install nix
 
 Use nix
 ------
+.. list-table:: Some common usages
+   :widths: 30 50, 50
+   :header-rows: 1
+
+   * - Description
+     - Command
+     - Example
+   * - Install a package
+     - ``nix-env -i <pkg>`` 
+     - ``nix-env -i hello``
+   * - Remove a package
+     - ``nix-env -e <pkg>`` 
+     - ``nix-env -e hello`` 
+
 
 
 Reference
-***********
+------
 https://rgoswami.me/posts/ccon-tut-nix/
 https://nix-tutorial.gitlabpages.inria.fr/nix-tutorial/getting-started.html
 
