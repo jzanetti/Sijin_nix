@@ -13,4 +13,4 @@ Contents
 .. toctree::
 
    Basics
-   advanced
+   Advanced
