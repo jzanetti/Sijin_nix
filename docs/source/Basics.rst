@@ -86,9 +86,10 @@ Use nix
      - ``nix-build '<channel name>' -A <pkg>`` 
      - ``nix-build '<nixpkgs>' -A <hello>``
          - building the hello package from the nixpkgs channel
-         - | The resulting package is build and added to the nix store. 
-             For conenience, a link pointing to the package that has been put 
-             into the store is created in ``./result/bin/hello``
+         - The resulting package is build and added to the nix store. 
+            e.g., a link pointing to the package that has been put 
+            into the store is created in ``./result/bin/hello``
+      
 
 Reference
 ------
