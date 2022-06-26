@@ -32,7 +32,7 @@ The description for the major components in a ``.nix`` build script is described
    :alt: alternate text
    :align: left
 
-
+The file can be obtained `here <https://nix-tutorial.gitlabpages.inria.fr/nix-tutorial/first-package.html#id1>`_
 
 
 
