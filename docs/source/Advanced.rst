@@ -15,6 +15,7 @@ Understand the nix derivation
 The core  for a derivation is the derivation script, an example can be accessed here
 
 There are at least two major components in a nix build script:
+
 - Input (e.g., channel for getting building tools)
 - Build process
     - name of the package
@@ -25,11 +26,11 @@ There are at least two major components in a nix build script:
 The description for the major components in a ``.nix`` build script is described below
 
 .. image:: sijin_nix_derivation.PNG
-   :width: 400px
-   :height: 250px
+   :width: 700px
+   :height: 550px
    :scale: 100 %
    :alt: alternate text
-   :align: right
+   :align: left
 
 
 
