@@ -31,7 +31,7 @@ Install nix
 Use nix
 ------
 .. list-table:: Packages
-   :widths: 30 50 50
+   :widths: 30 40 60
    :header-rows: 1
 
    * - Description
@@ -42,7 +42,10 @@ Use nix
      - ``nix-env -i hello`` or ``nix-env -iA nixpkgs.hello``
    * - Remove a package
      - ``nix-env -e <pkg>`` 
-     - ``nix-env -e hello`` 
+     - ``nix-env -e hello``
+   * - Upgrade a package
+     - ``nix-env --upgrade <pkg>`` 
+     - ``nix-env --upgrade hello`` 
    * - Query installed packages
      - ``nix-env --query <pkg>`` 
      - ``nix-env --query hello`` or ``nix-env --query "*"``
@@ -50,8 +53,8 @@ Use nix
      - ``nix search <channel> <pkg>`` 
      - ``nix search nixpkgs hello``
 
-.. list-table:: Channels
-   :widths: 30 50 50
+.. list-table:: Channels (`all nix channels <https://channels.nixos.org/>`_)
+   :widths: 30 40 60
    :header-rows: 1
 
    * - Description
@@ -61,16 +64,35 @@ Use nix
      - ``nix-channel --list`` 
      - N/A
    * - Add a new channel
-     - ``nix-channel --add <channel_link> <channel_name>; nix-channel --update`` 
+     - - ``nix-channel --add <channel_link> <channel_name>``
+       - nix-channel --update`` 
      - - ``nix-channel --add https://nixos.org/channels/nixos-19.03 nixpkgs``
        - ``nix-channel --update``
    * - Remove a channel
-     - ``nix-channel --remove <channel_name>; nix-channel --update`` 
+     - - ``nix-channel --remove <channel_name>``
+       - ``nix-channel --update`` 
      - - ``nix-channel --remove https://nixos.org/channels/nixos-19.03 nixpkgs``
        - ``nix-channel --update``
 
+
+.. list-table:: Build (used to build a package defined with the Nix Expression Language)
+   :widths: 30 40 60
+   :header-rows: 1
+
+   * - Description
+     - Command
+     - Example
+   * - build a package
+     - ``nix-build '<channel name>' -A <pkg>`` 
+     - ``nix-build '<nixpkgs>' -A <hello>``
+         - building the hello package from the nixpkgs channel
+         - | The resulting package is build and added to the nix store. 
+             For conenience, a link pointing to the package that has been put 
+             into the store is created in ``./result/bin/hello``
+
 Reference
 ------
-https://rgoswami.me/posts/ccon-tut-nix/
-https://nix-tutorial.gitlabpages.inria.fr/nix-tutorial/getting-started.html
+- https://rgoswami.me/posts/ccon-tut-nix/
+
+- https://nix-tutorial.gitlabpages.inria.fr/nix-tutorial/getting-started.html
 
