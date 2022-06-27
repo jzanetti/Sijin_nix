@@ -75,7 +75,7 @@ Use nix
        - ``nix-channel --update``
 
 
-.. list-table:: Build (used to build a package defined with the Nix Expression Language)
+.. list-table:: Build (see Advanced for more details)
    :widths: 30 40 60
    :header-rows: 1
 
@@ -85,14 +85,6 @@ Use nix
    * - build a package
      - ``nix-build '<channel name>' -A <pkg>``
      - ``nix-build '<nixpkgs>' -A <hello>``
-        - building the hello package 
-          from the nixpkgs channel
-
-        - The resulting package is build 
-          and added to the nix store. 
-          e.g., a link pointing to the package 
-          that has been put into the store is 
-          created in ``./result/bin/hello``
    * - clean up nix store (unused packages)
      - ``nix-collect-garbage``
      - N/A

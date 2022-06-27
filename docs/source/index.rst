@@ -13,4 +13,4 @@ Contents
 .. toctree::
 
    Basics
-   Advanced
+   Nix_derivation
