@@ -1,12 +1,12 @@
-{
-  pkgs ? import (fetchTarball https://channels.nixos.org/nixpkgs-22.05-darwin/nixexprs.tar.xz) {}
+{ 
+ # pkgs ? import (fetchTarball https://channels.nixos.org/nixpkgs-22.05-darwin/nixexprs.tar.xz) {} # use default
+  pkgs ? import <nixpkgs> {} # use default
 }:
 
 with pkgs; 
 
 let
     packages = rec {
-
         nc = pkgs.stdenv.mkDerivation rec {
             pname = "netcdf-c";
             version = "3.9-test";
@@ -36,18 +36,12 @@ let
                 mkdir -p $out
                 mv /tmp/tmp/netcdf-install/* $out
             '';
-            shellHook = ''
-                LD_LIBRARY_PATH=$out/lib:$LD_LIBRARY_PATH
-                PATH=$out/bin:$PATH
-            '';
-    };
-
-    # The shell of our experiment runtime environment
-    expEnv = mkShell rec {
-      name = "exp01Env";
-      buildInputs = [
-        nc
-      ];
-    };
-
-}
+        };
+     # The shell of our experiment runtime environment
+        expEnv = mkShell rec {
+            name = "exp01Env";
+            buildInputs = [nc];
+        };
+};
+in 
+    packages 

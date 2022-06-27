@@ -1,4 +1,4 @@
-Advance Practice
+Understand the nix derivation
 =====
 
 This page records some advanced concepts and commands for **nix**
@@ -10,7 +10,7 @@ In Nix, packages are defined in a domain specific language called **Nix Expressi
    - **Nix derivation**: A derivation in Nix is a definition of a build, which takes some inputs and produces an output (in other words, the derivation is a function that describes a build process). 
      Using Derivation is an alternative of using a channel, and is much more reproducible as the tarball can be fixed to a specific version as it is done here. 
 
-Understand the nix derivation
+Nix Derivation
 ------
 The core  for a derivation is the derivation script, an example can be accessed here
 
@@ -93,7 +93,3 @@ The generaic environment (or shell) can be triggered by
 .. code-block:: bash
 
    nix-shell shell.nix
-
-
-Create the my first derivation
-------
