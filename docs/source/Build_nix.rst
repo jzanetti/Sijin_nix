@@ -103,3 +103,68 @@ We can use both ``nix-shell`` or ``nix-build`` for the above file, while we need
    nix-build default.nix -A nc
 
 We will see all the binaries and libraries are built in ./result, which is linked to the nix store (e.g., ``/nix/store/xxlf2ndmajaadbcrlgj0nfcj023vhg5a-netcdf-c-3.9-test``).
+
+Run the package
+*************
+
+**Option 1: run the package manually within the shell**
+After the build (last step), we can run ``netCDF`` within the environment of ``expEnv``
+
+.. code-block:: bash
+
+   nix-shell default2.nix -A expEnv
+
+After this we can test ``ncdump`` within the nix shell (e.g., ``ncdump --help``)
+
+**Option 2: run the package with command**
+We can define a script (e.g., for using ``ncdump``) so we don't have to manually get into the nix shell. For example, the script (e.g.,``test.sh``) can be something like
+
+.. code-block:: bash
+
+    #!/usr/bin/env bash
+    ncdump --help
+
+Then we can execute ``test.sh`` within the nix-shell as:
+
+.. code-block:: bash
+
+    nix-shell default.nix -A expEnv --command ./test.sh
+
+**Option 3: define the command with the derivation script**
+
+We can define the runtime script within the nix derivation shell, so everytime we don't even  need to attach ``--command``. 
+In order to do so, we need to add ``shellHook`` under ``mkShell rec``. For example,
+
+.. code-block:: bash
+
+    expEnv = mkShell rec {
+        name = "exp01Env";
+        buildInputs = [nc];
+        shellHook = "./test.sh";
+    };
+
+Then we can execute ``test.sh`` simply by
+
+.. code-block:: bash
+
+    nix-shell default.nix -A expEnv
+
+  
+**Option 4: nix-shell shebang**
+
+We even don't have to call ``nix-shell`` even we need to use ``nix`` package or environment. In order to do so, we can use ``shebang``.
+For example, we can have a shebang script (e.g., ``test_shebang.sh``) as:
+
+.. code-block:: bash
+
+    #!/usr/bin/env nix-shell
+    #!nix-shell default3.nix -A expEnv -i bash
+    ncdump --help
+  
+  Then we can execute the ``test_shebang.sh`` as;
+
+.. code-block:: bash
+
+    ./test_shebang.sh
+
+    
