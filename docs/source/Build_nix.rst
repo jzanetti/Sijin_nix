@@ -108,6 +108,7 @@ Run the package
 *************
 
 **Option 1: run the package manually within the shell**
+
 After the build (last step), we can run ``netCDF`` within the environment of ``expEnv``
 
 .. code-block:: bash
@@ -117,6 +118,7 @@ After the build (last step), we can run ``netCDF`` within the environment of ``e
 After this we can test ``ncdump`` within the nix shell (e.g., ``ncdump --help``)
 
 **Option 2: run the package with command**
+
 We can define a script (e.g., for using ``ncdump``) so we don't have to manually get into the nix shell. For example, the script (e.g.,``test.sh``) can be something like
 
 .. code-block:: bash
@@ -161,7 +163,7 @@ For example, we can have a shebang script (e.g., ``test_shebang.sh``) as:
     #!nix-shell default3.nix -A expEnv -i bash
     ncdump --help
   
-  Then we can execute the ``test_shebang.sh`` as;
+Then we can execute the ``test_shebang.sh`` as;
 
 .. code-block:: bash
 
