@@ -14,3 +14,4 @@ Contents
 
    Basics
    Nix_derivation
+   Build_nix

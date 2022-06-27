@@ -73,7 +73,7 @@ Now let's do the building manually,
 
 Note that the reason we may have to run ``git config --global http.sslVerify false`` is that we may get ``SSL certificate problem`` from git if we don't ...
 
-Creae a generic environment with nix-shell
+Create a generic environment with nix-shell
 *********
 Soemtimes we may want to have an completely isolated environment for developing or debugging a package, ``nix-shell`` can do this for us as well
 
