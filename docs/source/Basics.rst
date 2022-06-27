@@ -52,6 +52,9 @@ Use nix
    * - Search a package
      - ``nix search <channel> <pkg>`` 
      - ``nix search nixpkgs hello``
+   * - Locate a package (within nix shell)
+     - ``type <pkg>`` 
+     - ``type hello``
 
 .. list-table:: Channels (`all nix channels <https://channels.nixos.org/>`_)
    :widths: 30 40 60

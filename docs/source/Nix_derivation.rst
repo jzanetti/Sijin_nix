@@ -61,6 +61,7 @@ The shell will create a environment for us to manually build/debug the package.
     - without ``--pure``: the environment starts from the current environment variables
 
 Now let's do the building manually,
+
 .. code-block:: bash
 
     git config --global http.sslVerify false
@@ -92,3 +93,7 @@ The generaic environment (or shell) can be triggered by
 .. code-block:: bash
 
    nix-shell shell.nix
+
+
+Create the my first derivation
+------
