@@ -35,6 +35,16 @@ The above project ``default.nix`` file can be explained as below
 
 .. image:: sijin_nix2_env.PNG
    :width: 700px
+   :height: 300px
+   :scale: 100 %
+   :alt: alternate text
+   :align: left
+
+As mentioned here, the format of the ``*.nix`` in the subdirectory for a project is different from the standalone one, 
+here we give an example for the difference for ``netCDF``:
+
+.. image:: sijin_nix3_env.PNG
+   :width: 700px
    :height: 400px
    :scale: 100 %
    :alt: alternate text
