@@ -24,8 +24,8 @@ In this example, we want to install ``netCDF`` and ``zlib`` through the followin
 
         let
             packages = rec {
-                nc = callPackage pkgs/nc/default.nix {};
                 zlib = callPackage pkgs/zlib/default.nix {};
+                nc = callPackage pkgs/nc/default.nix {};
                 inherit pkgs;
             };
         in
@@ -33,7 +33,7 @@ In this example, we want to install ``netCDF`` and ``zlib`` through the followin
 
 The above project ``default.nix`` file can be explained as below
 
-.. image:: sijin_nix2_derivation.PNG
+.. image:: sijin_nix2_env.PNG
    :width: 700px
    :height: 400px
    :scale: 100 %

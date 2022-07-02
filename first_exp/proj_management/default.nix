@@ -6,8 +6,8 @@ with pkgs;
 
 let
   packages = rec {
-    nc = callPackage pkgs/nc/default.nix {};
     zlib = callPackage pkgs/zlib/default.nix {};
+    nc = callPackage pkgs/nc/default.nix {};
     inherit pkgs;
   };
 in
