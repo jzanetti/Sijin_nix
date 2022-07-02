@@ -56,5 +56,30 @@ here we give an example for the difference for ``netCDF``:
 Therefore we can see that the ``*.nix`` in the subdirectory for a project is a simplified version for the standalone version.
 
 
+A customized setup
+*********
+In the above case, we install ``netCDF`` and ``zlib`` with the default version. It is worthwhile to note that ``netCDF`` requires ``zlib``,
+and in the previous section, the ``zlib`` is from the default version in ``nixpkgs``. 
 
+In this example, we want to use a customized, user-defined ``zlib`` version,
+
+    .. code-block:: bash
+
+        {
+            pkgs ? import <nixpkgs> {}
+        }:
+
+        with pkgs;
+
+            let
+                packages = rec {
+                    nc = callPackage pkgs/nc/default.nix { zlib = zlib_customized; };
+                    zlib_customized = callPackage pkgs/zlib/custom.nix {};
+
+                    inherit pkgs;
+                };
+            in
+        packages
+
+As you can see, the dependancy ``zlib`` is from ``zlib_customized``, which is installed through ``pkgs/zlib/custom.nix``
 
