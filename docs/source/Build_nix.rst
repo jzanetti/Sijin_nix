@@ -119,7 +119,7 @@ After this we can test ``ncdump`` within the nix shell (e.g., ``ncdump --help``)
 
 **Option 2: run the package with command**
 
-We can define a script (e.g., for using ``ncdump``) so we don't have to manually get into the nix shell. For example, the script (e.g.,``test.sh``) can be something like
+We can define a script (e.g., for using ``ncdump``) so we don't have to manually get into the nix shell. For example, the script (e.g., ``test.sh``) can be something like
 
 .. code-block:: bash
 
