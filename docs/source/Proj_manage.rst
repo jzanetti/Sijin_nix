@@ -12,6 +12,9 @@ Luciky **nix** provides a way to manage such a large project better
     Nix enables decentralized package definitions, as the packages do not need 
     to be in the same repository to be well defined.
 
+A basic project setup
+*********
+
 In this example, we want to install ``netCDF`` and ``zlib`` through the following ``default.nix``
 
     .. code-block:: bash
@@ -49,5 +52,9 @@ here we give an example for the difference for ``netCDF``:
    :scale: 100 %
    :alt: alternate text
    :align: left
+
+Therefore we can see that the ``*.nix`` in the subdirectory for a project is a simplified version for the standalone version.
+
+
 
 
