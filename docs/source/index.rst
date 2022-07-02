@@ -15,4 +15,4 @@ Contents
    Basics
    Nix_derivation
    Build_nix
-   Project_manage
+   Proj_manage

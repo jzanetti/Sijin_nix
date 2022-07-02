@@ -12,3 +12,25 @@ Luciky **nix** provides a way to manage such a large project better
     Nix enables decentralized package definitions, as the packages do not need 
     to be in the same repository to be well defined.
 
+In this example, we want to install ``netCDF`` and ``zlib`` through the following ``default.nix``
+
+    .. code-block:: bash
+
+        {
+            pkgs ? import <nixpkgs> {}
+        }:
+
+        with pkgs;
+
+        let
+            packages = rec {
+                nc = callPackage pkgs/nc/default.nix {};
+                zlib = callPackage pkgs/zlib/default.nix {};
+                inherit pkgs;
+            };
+        in
+            packages
+
+
+
+
