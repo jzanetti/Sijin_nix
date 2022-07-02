@@ -98,3 +98,5 @@ Reference
 
 - https://nix-tutorial.gitlabpages.inria.fr/nix-tutorial/getting-started.html
 
+- https://www.tweag.io/blog/2020-05-25-flakes/
+

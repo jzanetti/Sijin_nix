@@ -16,3 +16,4 @@ Contents
    Nix_derivation
    Build_nix
    Proj_manage
+   flakes
