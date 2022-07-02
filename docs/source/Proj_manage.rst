@@ -31,6 +31,13 @@ In this example, we want to install ``netCDF`` and ``zlib`` through the followin
         in
             packages
 
+The above project ``default.nix`` file can be explained as below
 
+.. image:: sijin_nix2_derivation.PNG
+   :width: 700px
+   :height: 400px
+   :scale: 100 %
+   :alt: alternate text
+   :align: left
 
 
