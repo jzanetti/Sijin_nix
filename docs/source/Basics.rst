@@ -95,6 +95,20 @@ Use nix
      - ``nix-collect-garbage``
      - N/A
 
+.. list-table:: Flakes
+   :widths: 30 40 60
+   :header-rows: 1
+
+   * - Description
+     - Command
+     - Example
+   * - show the outputs of a flake URL
+     - ``nix flake show '<URL>'``
+     - ``nix flake show nixpkgs``
+   * - clone the flake source to a local directory
+     - ``nix flake clone <URL> -f <local>``
+     - ``nix flake clone git+https://github.com/balsoft/hello-flake/ -f hello-flake``
+
 Reference
 ------
 - https://rgoswami.me/posts/ccon-tut-nix/
