@@ -100,3 +100,4 @@ Reference
 
 - https://www.tweag.io/blog/2020-05-25-flakes/
 
+- https://serokell.io/blog/practical-nix-flakes
