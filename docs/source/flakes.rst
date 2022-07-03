@@ -10,8 +10,9 @@ are the same from different builds.
 
 Flakes are a solution to these problems. 
 
-A flake is simply a source tree (such as a Git repository) containing a file named flake.nix, which provides a 
-standardized interface to Nix packages (therefore, in most cases, the flake works with Git).
+.. note::
+
+    A flake is simply a source tree (such as a Git repository) containing a file named flake.nix, which provides a standardized interface to Nix packages (therefore, in most cases, the flake works with Git).
 
 
 What is Nix Flake
@@ -102,7 +103,7 @@ There are a few methods to build the package:
     
     .. code-block:: bash
 
-        ``nix build``
+        nix build
     
     within the directory where we have ``flake.nix``
 
