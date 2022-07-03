@@ -78,7 +78,7 @@ Alternatively, we can create our own ``flake.nix``. An example is given below:
 
 The above file can be explained as:
 
-.. image:: sijin_nix4_env.PNG
+.. image:: sijin_nix5_env.PNG
    :width: 700px
    :height: 300px
    :scale: 100 %
