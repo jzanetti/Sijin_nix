@@ -5,7 +5,7 @@ Nix claims the reproducibility, but actually it is usually not the case:
 - Nix can access arbitrary control files from different machines, for example,
     - ``~/.config/nixpkgs/config.nix``
     - Nix search path such as ``NIX_PATH``
-- Also, when we use `GitFetch` etc. to get the 3rd party libarary, it's difficult to absolutely make sure that the versions we get 
+    - Also, when we use `GitFetch` etc. to get the 3rd party libarary, it's difficult to absolutely make sure that the versions we get 
 are the same from different builds.
 
 Flakes are a solution to these problems. 
@@ -84,9 +84,7 @@ The above file can be explained as:
    :alt: alternate text
    :align: left
 
-_An good example of the ``flake.nix`` can be found https://github.com/haskell/haskell-language-server/blob/master/flake.nix_
-
-**Step 2: track flake.nix**
+An good example of the ``flake.nix`` can be found https://github.com/haskell/haskell-language-server/blob/master/flake.nix
 
 Note that any file that is not tracked by Git is invisible during Nix evaluation, therefore we need to make ``flake.nix`` visible to Git:
 
@@ -98,16 +96,22 @@ Note that any file that is not tracked by Git is invisible during Nix evaluation
 
 There are a few methods to build the package:
 
-**3.1 build the package automatically**:
+- build the package automatically:
 
-We can build the package automatically by running ``nix build`` within the directory where we have ``flake.nix``
+    - We can build the package automatically by running 
+    
+    .. code-block:: bash
 
-**3.2 build the package step by step (e.g., debug)**:
+        ``nix build``
+    
+    within the directory where we have ``flake.nix``
 
-For example, we can debug the different phases of the ``flake.nix`` file, if we want to debug `configurePhase`, we can do:
+- build the package step by step (e.g., debug):
 
-.. code-block:: bash
+    - For example, we can debug the different phases of the ``flake.nix`` file, if we want to debug `configurePhase`, we can do:
 
-    nix develop
-    eval $configurePhase
+    .. code-block:: bash
+
+        nix develop
+        eval $configurePhase
 
