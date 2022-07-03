@@ -55,6 +55,9 @@ Use nix
    * - Locate a package (within nix shell)
      - ``type <pkg>`` 
      - ``type hello``
+   * - Search an excutable
+     - ``command -v <pkg>``
+     - N/A
 
 .. list-table:: Channels (`all nix channels <https://channels.nixos.org/>`_)
    :widths: 30 40 60
